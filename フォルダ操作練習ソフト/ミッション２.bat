@@ -1,116 +1,117 @@
 @echo off
 ::==============================================
-::ƒfƒBƒŒƒNƒgƒŠì¬—ûKƒ\ƒtƒg‡@
-::‚±‚ÌƒvƒƒWƒFƒNƒg‚Í GNU General Public License v3.0 ‚Ì‰º‚ÅŒöŠJ‚³‚ê‚Ä‚¢‚Ü‚·B
-::Ú×‚ÍAˆÈ‰º‚Ìgithub‚ðŽQÆ‚µ‚Ä‚­‚¾‚³‚¢B
+::ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªä½œæˆç·´ç¿’ã‚½ãƒ•ãƒˆ2
+::ã“ã®ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã¯ GNU General Public License v3.0 ã®ä¸‹ã§å…¬é–‹ã•ã‚Œã¦ã„ã¾ã™ã€‚
+::è©³ç´°ã¯ã€ä»¥ä¸‹ã®githubã‚’å‚ç…§ã—ã¦ãã ã•ã„ã€‚
 ::https://github.com/KenichiroY/DirectoryPracticeTool
 ::==============================================
 
 echo ========================================
-echo   ‚µ‚è‚å‚¤‚¹‚¢‚è ‚©‚ñ‚«‚å‚¤‚±‚¤‚¿‚­
+echo   ã—ã‚Šã‚‡ã†ã›ã„ã‚Š ã‹ã‚“ãã‚‡ã†ã“ã†ã¡ã
 echo ========================================
 echo.
-echo ƒtƒHƒ‹ƒ_‚Æƒtƒ@ƒCƒ‹‚ð‚Â‚­‚Á‚Ä‚¢‚Ü‚·...
+echo ãƒ•ã‚©ãƒ«ãƒ€ã¨ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ã¤ãã£ã¦ã„ã¾ã™...
 echo.
 
-if exist "2.‚µ‚è‚å‚¤®—" (
-    echo ‚·‚Å‚ÉƒtƒHƒ‹ƒ_‚ª‚ ‚è‚Ü‚·B‚¯‚µ‚Ü‚·...
-    rmdir /s /q "2.‚µ‚è‚å‚¤®—"
+if exist "2.ã—ã‚Šã‚‡ã†æ•´ç†" (
+    echo ã™ã§ã«ãƒ•ã‚©ãƒ«ãƒ€ãŒã‚ã‚Šã¾ã™ã€‚ã‘ã—ã¾ã™...
+    rmdir /s /q "2.ã—ã‚Šã‚‡ã†æ•´ç†"
 )
-mkdir "ƒ~ƒbƒVƒ‡ƒ“2"
-cd ƒ~ƒbƒVƒ‡ƒ“2
-mkdir "2.‚µ‚è‚å‚¤®—"
-cd "2.‚µ‚è‚å‚¤®—"
+mkdir "ãƒŸãƒƒã‚·ãƒ§ãƒ³2"
+cd ãƒŸãƒƒã‚·ãƒ§ãƒ³2
+mkdir "2.ã—ã‚Šã‚‡ã†æ•´ç†"
+cd "2.ã—ã‚Šã‚‡ã†æ•´ç†"
 
-REM Šw”NƒtƒHƒ‹ƒ_‚Æ‹³‰ÈƒtƒHƒ‹ƒ_‚ðì¬
+REM å­¦å¹´ãƒ•ã‚©ãƒ«ãƒ€ã¨æ•™ç§‘ãƒ•ã‚©ãƒ«ãƒ€ã‚’ä½œæˆ
 for %%g in (3 4 5 6) do (
-    mkdir "%%g”N¶"
-    mkdir "%%g”N¶\01‘Œê"
-    mkdir "%%g”N¶\02ŽÐ‰ï"
-    mkdir "%%g”N¶\03ŽZ”"
-    mkdir "%%g”N¶\04—‰È"
+    mkdir "%%gå¹´ç”Ÿ"
+    mkdir "%%gå¹´ç”Ÿ\01å›½èªž"
+    mkdir "%%gå¹´ç”Ÿ\02ç¤¾ä¼š"
+    mkdir "%%gå¹´ç”Ÿ\03ç®—æ•°"
+    mkdir "%%gå¹´ç”Ÿ\04ç†ç§‘"
 )
 
-REM ŽU‚ç‚©‚Á‚½ƒtƒ@ƒCƒ‹‚ðì¬i10ŒÂj
-echo ‚±‚ê‚Í 3”N¶‚Ì ‘Œê‚Ì ì•¶ ‚Å‚·B > "3”N_‘Œê_ì•¶.txt"
-echo ‚±‚ê‚Í 3”N¶‚Ì ŽZ”‚Ì ƒhƒŠƒ‹ ‚Å‚·B > "3”N_ŽZ”_ƒhƒŠƒ‹.txt"
-echo ‚±‚ê‚Í 3”N¶‚Ì —‰È‚Ì A•¨ŠÏŽ@ ‚Å‚·B > "3”N_—‰È_A•¨ŠÏŽ@.txt"
-echo ‚±‚ê‚Í 4”N¶‚Ì —‰È‚Ì ŠÏŽ@‹L˜^ ‚Å‚·B > "4”N_—‰È_ŠÏŽ@‹L˜^.txt"
-echo ‚±‚ê‚Í 4”N¶‚Ì ŽÐ‰ï‚Ì ’n} ‚Å‚·B > "4”N_ŽÐ‰ï_’n}.txt"
-echo ‚±‚ê‚Í 5”N¶‚Ì ‘Œê‚Ì Š¿ŽšƒeƒXƒg ‚Å‚·B > "5”N_‘Œê_Š¿ŽšƒeƒXƒg.txt"
-echo ‚±‚ê‚Í 5”N¶‚Ì ŽZ”‚Ì ƒvƒŠƒ“ƒg ‚Å‚·B > "5”N_ŽZ”_ƒvƒŠƒ“ƒg.txt"
-echo ‚±‚ê‚Í 5”N¶‚Ì ŽÐ‰ï‚Ì H‹Æ ‚Å‚·B > "5”N_ŽÐ‰ï_H‹Æ.txt"
-echo ‚±‚ê‚Í 6”N¶‚Ì —‰È‚Ì ŽÀŒ±Œ‹‰Ê ‚Å‚·B > "6”N_—‰È_ŽÀŒ±Œ‹‰Ê.txt"
-echo ‚±‚ê‚Í 6”N¶‚Ì ŽÐ‰ï‚Ì —ðŽj‚Ü‚Æ‚ß ‚Å‚·B > "6”N_ŽÐ‰ï_—ðŽj‚Ü‚Æ‚ß.txt"
+REM æ•£ã‚‰ã‹ã£ãŸãƒ•ã‚¡ã‚¤ãƒ«ã‚’ä½œæˆï¼ˆ10å€‹ï¼‰
+echo ã“ã‚Œã¯ 3å¹´ç”Ÿã® å›½èªžã® ä½œæ–‡ ã§ã™ã€‚ > "3å¹´_å›½èªž_ä½œæ–‡.txt"
+echo ã“ã‚Œã¯ 3å¹´ç”Ÿã® ç®—æ•°ã® ãƒ‰ãƒªãƒ« ã§ã™ã€‚ > "3å¹´_ç®—æ•°_ãƒ‰ãƒªãƒ«.txt"
+echo ã“ã‚Œã¯ 3å¹´ç”Ÿã® ç†ç§‘ã® æ¤ç‰©è¦³å¯Ÿ ã§ã™ã€‚ > "3å¹´_ç†ç§‘_æ¤ç‰©è¦³å¯Ÿ.txt"
+echo ã“ã‚Œã¯ 4å¹´ç”Ÿã® ç†ç§‘ã® è¦³å¯Ÿè¨˜éŒ² ã§ã™ã€‚ > "4å¹´_ç†ç§‘_è¦³å¯Ÿè¨˜éŒ².txt"
+echo ã“ã‚Œã¯ 4å¹´ç”Ÿã® ç¤¾ä¼šã® åœ°å›³ ã§ã™ã€‚ > "4å¹´_ç¤¾ä¼š_åœ°å›³.txt"
+echo ã“ã‚Œã¯ 5å¹´ç”Ÿã® å›½èªžã® æ¼¢å­—ãƒ†ã‚¹ãƒˆ ã§ã™ã€‚ > "5å¹´_å›½èªž_æ¼¢å­—ãƒ†ã‚¹ãƒˆ.txt"
+echo ã“ã‚Œã¯ 5å¹´ç”Ÿã® ç®—æ•°ã® ãƒ—ãƒªãƒ³ãƒˆ ã§ã™ã€‚ > "5å¹´_ç®—æ•°_ãƒ—ãƒªãƒ³ãƒˆ.txt"
+echo ã“ã‚Œã¯ 5å¹´ç”Ÿã® ç¤¾ä¼šã® å·¥æ¥­ ã§ã™ã€‚ > "5å¹´_ç¤¾ä¼š_å·¥æ¥­.txt"
+echo ã“ã‚Œã¯ 6å¹´ç”Ÿã® ç†ç§‘ã® å®Ÿé¨“çµæžœ ã§ã™ã€‚ > "6å¹´_ç†ç§‘_å®Ÿé¨“çµæžœ.txt"
+echo ã“ã‚Œã¯ 6å¹´ç”Ÿã® ç¤¾ä¼šã® æ­´å²ã¾ã¨ã‚ ã§ã™ã€‚ > "6å¹´_ç¤¾ä¼š_æ­´å²ã¾ã¨ã‚.txt"
 
 cd ..
-echo ========================================== > "‚ ‚»‚Ñ‚©‚½2.txt"
-echo   ‚¹‚ñ‚¹‚¢‚Ì‚µ‚è‚å‚¤‚¹‚¢‚è ‚Ì ‚ ‚»‚Ñ‚©‚½ >> "‚ ‚»‚Ñ‚©‚½2.txt"
-echo ========================================== >> "‚ ‚»‚Ñ‚©‚½2.txt"
-echo. >> "‚ ‚»‚Ñ‚©‚½2.txt"
-echo 1. 2.‚µ‚è‚å‚¤®— ‚ð ‚Ð‚ç‚­ >> "‚ ‚»‚Ñ‚©‚½2.txt"
-echo 2. ƒtƒ@ƒCƒ‹‚ß‚¢‚ð ‚æ‚ñ‚ÅA‚ª‚­‚Ë‚ñ‚Æ ‚«‚å‚¤‚©‚ð ‚½‚µ‚©‚ß‚é >> "‚ ‚»‚Ñ‚©‚½2.txt"
-echo 3. ƒtƒ@ƒCƒ‹‚ð ‚½‚¾‚µ‚¢ ƒtƒHƒ‹ƒ_‚É ƒhƒ‰ƒbƒOƒAƒ“ƒhƒhƒƒbƒv ‚·‚é >> "‚ ‚»‚Ñ‚©‚½2.txt"
-echo    ‚ê‚¢: 3”N_‘Œê_ì•¶.txt ‚Í 3”N¶ ‚Ì 01‘Œê ƒtƒHƒ‹ƒ_‚Ö >> "‚ ‚»‚Ñ‚©‚½2.txt"
-echo 4. ‚º‚ñ‚Ô I‚í‚Á‚½‚ç ‚±‚½‚¦‚ ‚í‚¹2.vbs ‚ð ‰Ÿ‚· >> "‚ ‚»‚Ñ‚©‚½2.txt"
-echo. >> "‚ ‚»‚Ñ‚©‚½2.txt"
-echo ========================================== >> "‚ ‚»‚Ñ‚©‚½2.txt"
+echo ========================================== > "ã‚ãã³ã‹ãŸ2.txt"
+echo   ã›ã‚“ã›ã„ã®ã—ã‚Šã‚‡ã†ã›ã„ã‚Š ã® ã‚ãã³ã‹ãŸ >> "ã‚ãã³ã‹ãŸ2.txt"
+echo ========================================== >> "ã‚ãã³ã‹ãŸ2.txt"
+echo. >> "ã‚ãã³ã‹ãŸ2.txt"
+echo 1. 2.ã—ã‚Šã‚‡ã†æ•´ç† ã‚’ ã²ã‚‰ã >> "ã‚ãã³ã‹ãŸ2.txt"
+echo 2. ãƒ•ã‚¡ã‚¤ãƒ«ã‚ã„ã‚’ ã‚ˆã‚“ã§ã€ãŒãã­ã‚“ã¨ ãã‚‡ã†ã‹ã‚’ ãŸã—ã‹ã‚ã‚‹ >> "ã‚ãã³ã‹ãŸ2.txt"
+echo 3. ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ ãŸã ã—ã„ ãƒ•ã‚©ãƒ«ãƒ€ã« ãƒ‰ãƒ©ãƒƒã‚°ã‚¢ãƒ³ãƒ‰ãƒ‰ãƒ­ãƒƒãƒ— ã™ã‚‹ >> "ã‚ãã³ã‹ãŸ2.txt"
+echo    ã‚Œã„: 3å¹´_å›½èªž_ä½œæ–‡.txt ã¯ 3å¹´ç”Ÿ ã® 01å›½èªž ãƒ•ã‚©ãƒ«ãƒ€ã¸ >> "ã‚ãã³ã‹ãŸ2.txt"
+echo 4. ãœã‚“ã¶ çµ‚ã‚ã£ãŸã‚‰ ã“ãŸãˆã‚ã‚ã›2.vbs ã‚’ æŠ¼ã™ >> "ã‚ãã³ã‹ãŸ2.txt"
+echo. >> "ã‚ãã³ã‹ãŸ2.txt"
+echo ========================================== >> "ã‚ãã³ã‹ãŸ2.txt"
 
-REM “š‚¦‡‚í‚¹2.vbs‚ð¶¬
-echo Option Explicit > "‚±‚½‚¦‚ ‚í‚¹2.vbs"
-echo. >> "‚±‚½‚¦‚ ‚í‚¹2.vbs"
-echo Dim fso >> "‚±‚½‚¦‚ ‚í‚¹2.vbs"
-echo Dim score, total >> "‚±‚½‚¦‚ ‚í‚¹2.vbs"
-echo Dim message, title >> "‚±‚½‚¦‚ ‚í‚¹2.vbs"
-echo Dim allCorrect >> "‚±‚½‚¦‚ ‚í‚¹2.vbs"
-echo. >> "‚±‚½‚¦‚ ‚í‚¹2.vbs"
-echo Set fso = CreateObject("Scripting.FileSystemObject") >> "‚±‚½‚¦‚ ‚í‚¹2.vbs"
-echo. >> "‚±‚½‚¦‚ ‚í‚¹2.vbs"
-echo If Not fso.FolderExists("2.‚µ‚è‚å‚¤®—") Then >> "‚±‚½‚¦‚ ‚í‚¹2.vbs"
-echo     MsgBox "u2.‚µ‚è‚å‚¤®—vƒtƒHƒ‹ƒ_‚ª ‚Ý‚Â‚©‚è‚Ü‚¹‚ñB" ^& vbCrLf ^& _ >> "‚±‚½‚¦‚ ‚í‚¹2.vbs"
-echo            "‚³‚«‚Éu2.‚µ‚è‚å‚¤®—.batv‚ð ‚¶‚Á‚±‚¤ ‚µ‚Ä‚­‚¾‚³‚¢B", _ >> "‚±‚½‚¦‚ ‚í‚¹2.vbs"
-echo            vbExclamation, "ƒGƒ‰[" >> "‚±‚½‚¦‚ ‚í‚¹2.vbs"
-echo     WScript.Quit >> "‚±‚½‚¦‚ ‚í‚¹2.vbs"
-echo End If >> "‚±‚½‚¦‚ ‚í‚¹2.vbs"
-echo. >> "‚±‚½‚¦‚ ‚í‚¹2.vbs"
-echo score = 0 >> "‚±‚½‚¦‚ ‚í‚¹2.vbs"
-echo total = 10 >> "‚±‚½‚¦‚ ‚í‚¹2.vbs"
-echo allCorrect = True >> "‚±‚½‚¦‚ ‚í‚¹2.vbs"
-echo. >> "‚±‚½‚¦‚ ‚í‚¹2.vbs"
-echo If fso.FileExists("2.‚µ‚è‚å‚¤®—\3”N¶\01‘Œê\3”N_‘Œê_ì•¶.txt") Then score = score + 1 >> "‚±‚½‚¦‚ ‚í‚¹2.vbs"
-echo If fso.FileExists("2.‚µ‚è‚å‚¤®—\3”N¶\03ŽZ”\3”N_ŽZ”_ƒhƒŠƒ‹.txt") Then score = score + 1 >> "‚±‚½‚¦‚ ‚í‚¹2.vbs"
-echo If fso.FileExists("2.‚µ‚è‚å‚¤®—\3”N¶\04—‰È\3”N_—‰È_A•¨ŠÏŽ@.txt") Then score = score + 1 >> "‚±‚½‚¦‚ ‚í‚¹2.vbs"
-echo If fso.FileExists("2.‚µ‚è‚å‚¤®—\4”N¶\04—‰È\4”N_—‰È_ŠÏŽ@‹L˜^.txt") Then score = score + 1 >> "‚±‚½‚¦‚ ‚í‚¹2.vbs"
-echo If fso.FileExists("2.‚µ‚è‚å‚¤®—\4”N¶\02ŽÐ‰ï\4”N_ŽÐ‰ï_’n}.txt") Then score = score + 1 >> "‚±‚½‚¦‚ ‚í‚¹2.vbs"
-echo If fso.FileExists("2.‚µ‚è‚å‚¤®—\5”N¶\01‘Œê\5”N_‘Œê_Š¿ŽšƒeƒXƒg.txt") Then score = score + 1 >> "‚±‚½‚¦‚ ‚í‚¹2.vbs"
-echo If fso.FileExists("2.‚µ‚è‚å‚¤®—\5”N¶\03ŽZ”\5”N_ŽZ”_ƒvƒŠƒ“ƒg.txt") Then score = score + 1 >> "‚±‚½‚¦‚ ‚í‚¹2.vbs"
-echo If fso.FileExists("2.‚µ‚è‚å‚¤®—\5”N¶\02ŽÐ‰ï\5”N_ŽÐ‰ï_H‹Æ.txt") Then score = score + 1 >> "‚±‚½‚¦‚ ‚í‚¹2.vbs"
-echo If fso.FileExists("2.‚µ‚è‚å‚¤®—\6”N¶\04—‰È\6”N_—‰È_ŽÀŒ±Œ‹‰Ê.txt") Then score = score + 1 >> "‚±‚½‚¦‚ ‚í‚¹2.vbs"
-echo If fso.FileExists("2.‚µ‚è‚å‚¤®—\6”N¶\02ŽÐ‰ï\6”N_ŽÐ‰ï_—ðŽj‚Ü‚Æ‚ß.txt") Then score = score + 1 >> "‚±‚½‚¦‚ ‚í‚¹2.vbs"
-echo. >> "‚±‚½‚¦‚ ‚í‚¹2.vbs"
-echo message = "========== ‚±‚½‚¦‚ ‚í‚¹ ==========" ^& vbCrLf ^& vbCrLf >> "‚±‚½‚¦‚ ‚í‚¹2.vbs"
-echo message = message ^& "‚¹‚¢‚©‚¢: " ^& score ^& "/" ^& total ^& vbCrLf ^& vbCrLf >> "‚±‚½‚¦‚ ‚í‚¹2.vbs"
-echo. >> "‚±‚½‚¦‚ ‚í‚¹2.vbs"
-echo If score = total Then >> "‚±‚½‚¦‚ ‚í‚¹2.vbs"
-echo     message = message ^& "š ‚â‚Á‚½‚ËI‚º‚ñ‚Ô ‚¹‚¢‚©‚¢II" ^& vbCrLf ^& _ >> "‚±‚½‚¦‚ ‚í‚¹2.vbs"
-echo                        "š ƒp[ƒtƒFƒNƒgI‚¹‚ñ‚¹‚¢‚Ì ‚µ‚è‚å‚¤‚¹‚¢‚è ‚ß‚¢‚¶‚ñ ‚¾‚ËI" >> "‚±‚½‚¦‚ ‚í‚¹2.vbs"
-echo     title = " ‚¾‚¢‚¹‚¢‚±‚¤I" >> "‚±‚½‚¦‚ ‚í‚¹2.vbs"
-echo     MsgBox message, vbInformation, title >> "‚±‚½‚¦‚ ‚í‚¹2.vbs"
-echo Else >> "‚±‚½‚¦‚ ‚í‚¹2.vbs"
-echo     message = message ^& "‚Ü‚¿‚ª‚¢: " ^& (total - score) ^& "‚±" ^& vbCrLf ^& vbCrLf ^& _ >> "‚±‚½‚¦‚ ‚í‚¹2.vbs"
-echo                        "‚à‚¤‚¢‚¿‚Ç ƒtƒ@ƒCƒ‹‚ß‚¢‚ð ‚æ‚­‚Ý‚Ä ‚ª‚ñ‚Î‚ë‚¤I" >> "‚±‚½‚¦‚ ‚í‚¹2.vbs"
-echo     title = "‚±‚½‚¦‚ ‚í‚¹ ‚¯‚Á‚©" >> "‚±‚½‚¦‚ ‚í‚¹2.vbs"
-echo     MsgBox message, vbExclamation, title >> "‚±‚½‚¦‚ ‚í‚¹2.vbs"
-echo End If >> "‚±‚½‚¦‚ ‚í‚¹2.vbs"
-echo. >> "‚±‚½‚¦‚ ‚í‚¹2.vbs"
-echo Set fso = Nothing >> "‚±‚½‚¦‚ ‚í‚¹2.vbs"
+REM ç­”ãˆåˆã‚ã›2.vbsã‚’ç”Ÿæˆ
+echo Option Explicit > "ã“ãŸãˆã‚ã‚ã›2.vbs"
+echo. >> "ã“ãŸãˆã‚ã‚ã›2.vbs"
+echo Dim fso >> "ã“ãŸãˆã‚ã‚ã›2.vbs"
+echo Dim score, total >> "ã“ãŸãˆã‚ã‚ã›2.vbs"
+echo Dim message, title >> "ã“ãŸãˆã‚ã‚ã›2.vbs"
+echo Dim allCorrect >> "ã“ãŸãˆã‚ã‚ã›2.vbs"
+echo. >> "ã“ãŸãˆã‚ã‚ã›2.vbs"
+echo Set fso = CreateObject("Scripting.FileSystemObject") >> "ã“ãŸãˆã‚ã‚ã›2.vbs"
+echo. >> "ã“ãŸãˆã‚ã‚ã›2.vbs"
+echo If Not fso.FolderExists("2.ã—ã‚Šã‚‡ã†æ•´ç†") Then >> "ã“ãŸãˆã‚ã‚ã›2.vbs"
+echo     MsgBox "ã€Œ2.ã—ã‚Šã‚‡ã†æ•´ç†ã€ãƒ•ã‚©ãƒ«ãƒ€ãŒ ã¿ã¤ã‹ã‚Šã¾ã›ã‚“ã€‚" ^& vbCrLf ^& _ >> "ã“ãŸãˆã‚ã‚ã›2.vbs"
+echo            "ã•ãã«ã€Œ2.ã—ã‚Šã‚‡ã†æ•´ç†.batã€ã‚’ ã˜ã£ã“ã† ã—ã¦ãã ã•ã„ã€‚", _ >> "ã“ãŸãˆã‚ã‚ã›2.vbs"
+echo            vbExclamation, "ã‚¨ãƒ©ãƒ¼" >> "ã“ãŸãˆã‚ã‚ã›2.vbs"
+echo     WScript.Quit >> "ã“ãŸãˆã‚ã‚ã›2.vbs"
+echo End If >> "ã“ãŸãˆã‚ã‚ã›2.vbs"
+echo. >> "ã“ãŸãˆã‚ã‚ã›2.vbs"
+echo score = 0 >> "ã“ãŸãˆã‚ã‚ã›2.vbs"
+echo total = 10 >> "ã“ãŸãˆã‚ã‚ã›2.vbs"
+echo allCorrect = True >> "ã“ãŸãˆã‚ã‚ã›2.vbs"
+echo. >> "ã“ãŸãˆã‚ã‚ã›2.vbs"
+echo If fso.FileExists("2.ã—ã‚Šã‚‡ã†æ•´ç†\3å¹´ç”Ÿ\01å›½èªž\3å¹´_å›½èªž_ä½œæ–‡.txt") Then score = score + 1 >> "ã“ãŸãˆã‚ã‚ã›2.vbs"
+echo If fso.FileExists("2.ã—ã‚Šã‚‡ã†æ•´ç†\3å¹´ç”Ÿ\03ç®—æ•°\3å¹´_ç®—æ•°_ãƒ‰ãƒªãƒ«.txt") Then score = score + 1 >> "ã“ãŸãˆã‚ã‚ã›2.vbs"
+echo If fso.FileExists("2.ã—ã‚Šã‚‡ã†æ•´ç†\3å¹´ç”Ÿ\04ç†ç§‘\3å¹´_ç†ç§‘_æ¤ç‰©è¦³å¯Ÿ.txt") Then score = score + 1 >> "ã“ãŸãˆã‚ã‚ã›2.vbs"
+echo If fso.FileExists("2.ã—ã‚Šã‚‡ã†æ•´ç†\4å¹´ç”Ÿ\04ç†ç§‘\4å¹´_ç†ç§‘_è¦³å¯Ÿè¨˜éŒ².txt") Then score = score + 1 >> "ã“ãŸãˆã‚ã‚ã›2.vbs"
+echo If fso.FileExists("2.ã—ã‚Šã‚‡ã†æ•´ç†\4å¹´ç”Ÿ\02ç¤¾ä¼š\4å¹´_ç¤¾ä¼š_åœ°å›³.txt") Then score = score + 1 >> "ã“ãŸãˆã‚ã‚ã›2.vbs"
+echo If fso.FileExists("2.ã—ã‚Šã‚‡ã†æ•´ç†\5å¹´ç”Ÿ\01å›½èªž\5å¹´_å›½èªž_æ¼¢å­—ãƒ†ã‚¹ãƒˆ.txt") Then score = score + 1 >> "ã“ãŸãˆã‚ã‚ã›2.vbs"
+echo If fso.FileExists("2.ã—ã‚Šã‚‡ã†æ•´ç†\5å¹´ç”Ÿ\03ç®—æ•°\5å¹´_ç®—æ•°_ãƒ—ãƒªãƒ³ãƒˆ.txt") Then score = score + 1 >> "ã“ãŸãˆã‚ã‚ã›2.vbs"
+echo If fso.FileExists("2.ã—ã‚Šã‚‡ã†æ•´ç†\5å¹´ç”Ÿ\02ç¤¾ä¼š\5å¹´_ç¤¾ä¼š_å·¥æ¥­.txt") Then score = score + 1 >> "ã“ãŸãˆã‚ã‚ã›2.vbs"
+echo If fso.FileExists("2.ã—ã‚Šã‚‡ã†æ•´ç†\6å¹´ç”Ÿ\04ç†ç§‘\6å¹´_ç†ç§‘_å®Ÿé¨“çµæžœ.txt") Then score = score + 1 >> "ã“ãŸãˆã‚ã‚ã›2.vbs"
+echo If fso.FileExists("2.ã—ã‚Šã‚‡ã†æ•´ç†\6å¹´ç”Ÿ\02ç¤¾ä¼š\6å¹´_ç¤¾ä¼š_æ­´å²ã¾ã¨ã‚.txt") Then score = score + 1 >> "ã“ãŸãˆã‚ã‚ã›2.vbs"
+echo. >> "ã“ãŸãˆã‚ã‚ã›2.vbs"
+echo message = "========== ã“ãŸãˆã‚ã‚ã› ==========" ^& vbCrLf ^& vbCrLf >> "ã“ãŸãˆã‚ã‚ã›2.vbs"
+echo message = message ^& "ã›ã„ã‹ã„: " ^& score ^& "/" ^& total ^& vbCrLf ^& vbCrLf >> "ã“ãŸãˆã‚ã‚ã›2.vbs"
+echo. >> "ã“ãŸãˆã‚ã‚ã›2.vbs"
+echo If score = total Then >> "ã“ãŸãˆã‚ã‚ã›2.vbs"
+echo     message = message ^& "â˜… ã‚„ã£ãŸã­ï¼ãœã‚“ã¶ ã›ã„ã‹ã„ï¼ï¼" ^& vbCrLf ^& _ >> "ã“ãŸãˆã‚ã‚ã›2.vbs"
+echo                        "â˜… ãƒ‘ãƒ¼ãƒ•ã‚§ã‚¯ãƒˆï¼ã›ã‚“ã›ã„ã® ã—ã‚Šã‚‡ã†ã›ã„ã‚Š ã‚ã„ã˜ã‚“ ã ã­ï¼" >> "ã“ãŸãˆã‚ã‚ã›2.vbs"
+echo     title = "â—Ž ã ã„ã›ã„ã“ã†ï¼" >> "ã“ãŸãˆã‚ã‚ã›2.vbs"
+echo     MsgBox message, vbInformation, title >> "ã“ãŸãˆã‚ã‚ã›2.vbs"
+echo Else >> "ã“ãŸãˆã‚ã‚ã›2.vbs"
+echo     message = message ^& "ã¾ã¡ãŒã„: " ^& (total - score) ^& "ã“" ^& vbCrLf ^& vbCrLf ^& _ >> "ã“ãŸãˆã‚ã‚ã›2.vbs"
+echo                        "ã‚‚ã†ã„ã¡ã© ãƒ•ã‚¡ã‚¤ãƒ«ã‚ã„ã‚’ ã‚ˆãã¿ã¦ ãŒã‚“ã°ã‚ã†ï¼" >> "ã“ãŸãˆã‚ã‚ã›2.vbs"
+echo     title = "ã“ãŸãˆã‚ã‚ã› ã‘ã£ã‹" >> "ã“ãŸãˆã‚ã‚ã›2.vbs"
+echo     MsgBox message, vbExclamation, title >> "ã“ãŸãˆã‚ã‚ã›2.vbs"
+echo End If >> "ã“ãŸãˆã‚ã‚ã›2.vbs"
+echo. >> "ã“ãŸãˆã‚ã‚ã›2.vbs"
+echo Set fso = Nothing >> "ã“ãŸãˆã‚ã‚ã›2.vbs"
 
 cd ..
 
 echo.
-echo ššš ‚©‚ñ‚¹‚¢Iššš
+echo â˜…â˜…â˜… ã‹ã‚“ã›ã„ï¼â˜…â˜…â˜…
 echo.
-echo 2.‚µ‚è‚å‚¤®— ƒtƒHƒ‹ƒ_‚ª ‚Å‚«‚Ü‚µ‚½B
-echo ‚±‚½‚¦‚ ‚í‚¹2.vbs ‚à ‚¢‚Á‚µ‚å‚É ‚Â‚­‚è‚Ü‚µ‚½B
+echo 2.ã—ã‚Šã‚‡ã†æ•´ç† ãƒ•ã‚©ãƒ«ãƒ€ãŒ ã§ãã¾ã—ãŸã€‚
+echo ã“ãŸãˆã‚ã‚ã›2.vbs ã‚‚ ã„ã£ã—ã‚‡ã« ã¤ãã‚Šã¾ã—ãŸã€‚
 echo.
 pause
+
